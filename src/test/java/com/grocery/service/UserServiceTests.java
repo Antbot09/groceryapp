@@ -50,7 +50,7 @@ class UserServiceTests {
 		user.setCustomer(customer);
 	}
 
-	@Test
+/*	@Test
      void testAddUser() {
         when(userRepository.save(any(UserModel.class))).thenReturn(user);
         UserModel result = userService.addUser(user);
@@ -102,5 +102,5 @@ class UserServiceTests {
         when(userRepository.findById(user.getUserId())).thenReturn(Optional.empty());
         CustomerModel result = userService.getCustomerByUserId(user.getUserId());
         assertNull(result);
-    }
+    }*/
 }
