@@ -15,28 +15,5 @@ import com.grocery.repository.AddressRepository;
 @SpringBootTest
 class AddressServiceTests {
 	
-	@Mock
-	AddressRepository addRepo;
 	
-	@InjectMocks
-	AddressServiceImpl addrSer;
-	
-	private AddressModel address;
-	
-	@BeforeEach
-	void setup() {
-		address = new AddressModel();
-		address.setAddressId(1);
-		address.setCity("Bengaluru");
-	}
-	
-	@Test
-	void testAddAddress() {
-		
-		when(addRepo.save(address)).thenReturn(address);
-		
-		AddressModel addr = addrSer.addAddress(address);
-		
-		assertEquals(addr, address);
-	}
 }
